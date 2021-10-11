@@ -24,14 +24,34 @@
     *   Curso de Manipulacion de Arrays en Javascript
 ---
 #### Generando Repositorio en Github
--   Ejemplo
-```javascript
 
-```
+- Repositorio de libre acceso con documentacion y ejemplos propios y del curso .
+- En este apartado puedes tener explicaciones y referencias a la documentacion oficial de [Javascript.info](https://es.javascript.info) || [Mozilla MDN Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
 ---
 #### ForEach
--   Ejemplo
+-   El método `Array.prototype.forEach` nos permite iterar sobre cada elemento de un array y ejecutar un `callback` que le pasamos como argumento.
+
 ```javascript
+// Syntax
+ArrayName.forEach((item, index, array) => { /*code*/ })
+
+```
+-   El `callback` que le pasamos a este método puede tomar 3 parámetros: 
+
+1. **item** → el elemento actual.
+2. **index [opcional]** → el índice del elemento actual.
+3. **array [opcional]** → el array mismo sobre el que estamos iterando.
+
+```javascript
+
+[1,2,3].forEach(console.log)
+
+//expected output
+//item - index -  array
+    1  -   0   -  [1,2,3]
+    2  -   1   -  [1,2,3]
+    3  -   2   -  [1,2,3]
 
 ```
 ---
