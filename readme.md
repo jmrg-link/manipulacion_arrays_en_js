@@ -65,9 +65,9 @@ ArrayName.forEach((item, index, array) => { /*code*/ })
 - > -**`Paso por referencia vs Paso por valor`**
   - Por tipos, los primitivos se pasan por valor y los objetos por referencia
     
-    <img src="https://static.platzi.com/media/user_upload/1_t6HbQiO7mmPvaesR9nAriw-6c33bd61-5064-475e-976a-fc998fdf56e2.jpg" alt="platzi logo" height="300px">
+    <img src="https://static.platzi.com/media/user_upload/1_t6HbQiO7mmPvaesR9nAriw-6c33bd61-5064-475e-976a-fc998fdf56e2.jpg" alt="ejemplo-for" height="300px">
 
-    <img src="https://i.stack.imgur.com/8XAQ1.gif" alt="platzi logo" height="300px">
+    <img src="https://i.stack.imgur.com/8XAQ1.gif" alt="fullcups" height="300px">
 
 
 
@@ -181,6 +181,8 @@ arrayName.reduce(
         - array [opcional] → el array sobre el que estamos aplicando el método.
   - 2. **accumulatorInitialValue** →es el valor que tomará `accumulator` en la primera iteración.
 
+  <img src="https://miro.medium.com/max/2000/1*dhTC_FFgiH3mKROrnDj12w.gif" alt="fullcups" height="300px">
+
 ```javascript
 const numbers = [1, 2, 3, 4, 5];
 
@@ -204,6 +206,27 @@ console.log(sum) // 20
 
 ```
 
+---
+#### Reduce Reloaded
+-   Devolver un solo objeto, aunque contenga “muchos elementos” sigue siendo un solo elemento de tipo objeto, y es por eso que se dice que reduce() solo devuelve un único valor.
+-   Ejemplo
+```javascript
+const numbers = [1,2,3,3,4,5,2,1,1,3,4,5,6,7,5,5,4,7,8,9,8,7,5,4,5,8,9];
+const ranges = ['1-5','6-7','8-9'];
+
+const result = numbers.reduce((acum, item) => {
+  if (item < 5) {
+    !acum[ranges[0]] ? acum[ranges[0]] = 1 : acum[ranges[0]] += 1;
+  } else if (item > 5 && item < 8) {
+    !acum[ranges[1]] ? acum[ranges[1]] = 1 : acum[ranges[1]] += 1;
+  } else {
+    !acum[ranges[2]] ? acum[ranges[2]] = 1 : acum[ranges[2]] += 1;
+  }
+  return acum
+},{})
+
+console.log(result) // { '1-5': 12, '8-9': 11, '6-7': 4 }
+```
 ---
 #### Metodos en Javascript
 -   Ejemplo
