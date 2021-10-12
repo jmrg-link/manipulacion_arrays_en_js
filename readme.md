@@ -396,10 +396,35 @@ console.log(matriz.flat(2))
 - Example : folder:/server
 ---
 #### Mutable Fucntion
--   Ejemplo
-```javascript
+-   Hay algunos métodos dentro de Array.prototype que nos permiten modificar nuestros arrays de una forma fácil y sencilla, algunos de ellos son: 
+    -   1. **Push:**
+        -   Añade uno o más elementos al final de un array y nos devuelve la nueva longitud de nuestro array.
+  
+  
+          ```javascript
+          arrayName.push(Element, anotherElement, elementN /*etc.*/)
+          ```
 
-```
+    -   2. **Pop:**
+        -   Este método nos permite eliminar el último elemento de un array, no requiere ningún parámetro.
+
+
+          ```javascript
+         arrayName.pop()
+          ```
+
+    -   3. **Shift:**  
+        -   Elimina el primer elemento que contenga un array y lo retorna.
+  
+          ```javascript
+         arrayName.shift()
+          ```
+    -   4. **Unshift:**  
+        -   Elimina el primer elemento que contenga un array y lo retorna.
+  
+          ```javascript
+         arrayName.unshift(element, anotherElement, elementN, /*etc.*/);
+          ```  
 ---
 #### Sort
 -   Ejemplo
