@@ -105,11 +105,35 @@ console.log('new_version', numbersPlusOne) /* [2, 3, 4, 5, 6] Sino que se creo u
  
 ---
 #### Map Reloaded
--   Ejemplo
+- Usos comunes o clásicos de map() sobre los arrays:
+    - Limpiar datos, seleccionar datos dentro de un array y devolverlos para su utilización en futuras acciones.
+    - Añadir un nuevo elemento, modificar agregando un nuevo dato al objeto pero sin modificar el array original.
+  
+- Hay que tener en cuenta que cuando trabajamos con objetos y con la funcion Array.prototype.map() o map() y retornamos el mismo objeto, lo que realmente hacemos es copiar la referencia en memoria (heap) que tiene el objeto original. 
+  
+- Esto provoca que como estamos modificando la referencia en memoria(heap), el array original también sea modificado. 
+- **Conclusion:**  map() es inmutable, copia la referencia en memoria y por eso hace el cambio en el array original.
+  
 ```javascript
-
+// Estamos retornando el objeto
+// copia la refencia en memoria
+const rta = orders.map(item => {
+    item.tax = .21
+    return item;
+})
 ```
--
+- Para realizar una copia y evitar la referencia en memoria, utilizamos el [spread operator](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax) de ES6, donde generamos un nuevo objeto con los valores del objeto original y luego agregamos el nuevo valor que nos interesa.
+
+```javascript
+const rta = orders.map(item => {
+    //retornamos un nuevo objeto 
+    //pero evitamos hacer ref. en memoria
+    return {
+        ...item,
+        tax: .21,
+    }
+})
+```
 ---
 #### Filter
 -   Ejemplo
