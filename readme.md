@@ -333,11 +333,24 @@ console.log(candies.includes('🍭')); //expected output -> true
 console.log(candies.includes('🍬', 2)); // expected output -> false (porque '🍬' está en la posición 0, pero nosotros le indicamos a includes que empiece a buscar desde el índice número 2.)
 ```
 ---
+#### Join
+-   Ejemplo
+```javascript
+
+```
+---
+#### Concat
+-   Ejemplo
+```javascript
+
+```
+---
 #### Flat
 -   Ejemplo
 ```javascript
 
 ```
+---
 #### FlatMap
 -   Ejemplo
 ```javascript
