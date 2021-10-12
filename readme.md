@@ -251,9 +251,23 @@ console.log(hasCarrots) // expected output -> true
 ```
 ---
 #### Every
--   Ejemplo
+-   Este método revisa todos lo elementos de un array, y si absolutamente todos cumplen una condición dada retorna true, en caso contrario retorna false. No muta al array original.
+-  ⚡ Si ejecutamos este método sobre un array vacío, este retornará true por defecto.
 ```javascript
+//Syntax
+arrayName.every((item, index /*optional*/, array /*optional*/) => {/*code*/});
 
+```
+- El callback que le pasamos a este método puede tomar 3 parámetros: 
+  - 1. **item** → el elemento actual.
+  - 2. **index [opcional]** → el índice del elemento actual.
+  - 3. **array [opcional]** → el array mismo sobre el que estamos iterando.
+
+- Ejemplo :
+```javascript
+const numbers = [2,4,6,8];
+const isEven = numbers.every((number) => number % 2 === 0); /*revisa si todos los números dentro del array son pares.*/
+console.log(isEven); // expected output -> true
 ```
 ---
 #### Find & FindIndex
