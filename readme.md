@@ -295,6 +295,26 @@ const snake = animals.find(item => item === '🐍');
 console.log(snake); //expected output -> '🐍'
 ```
 ---
+#### FindIndex
+-   FindIndex nos itera sobre un array y encuentra el índice del primer elemento que coincida con una condición dada, si no hay algún elemento que coincida, entonces va a retornar -1.
+-   Find siempre va a devolver el índice del primer y solo el primer elemento que haga match con la condición
+```javascript
+//Syntax
+arrayName.findIndex((item, index /*optional*/, array /*optional*/) => {/*code*/});
+
+```
+- El callback que le pasamos a este método puede tomar 3 parámetros: 
+  - 1. **item** → el elemento actual.
+  - 2. **index [opcional]** → el índice del elemento actual.
+  - 3. **array [opcional]** → el array mismo sobre el que estamos iterando.
+
+```javascript
+//example
+const animals = ['🐱', '🐶', '🦁', '🐍', '🐞'];
+const indexOfLion = animals.findIndex(item => item === '🦁');
+console.log(indexOfLion); //expected output -> 2
+```
+---
 #### Includes
 -   Ejemplo
 ```javascript
