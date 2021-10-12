@@ -271,9 +271,28 @@ console.log(isEven); // expected output -> true
 ```
 ---
 #### Find & FindIndex
--   Ejemplo
+- Find es un método inmutable que nos ayuda a iterar sobre un array y encontrar el primer elemento que coincida con una condición dada, si no hay algún elemento que coincida, entonces va a retornar **undefined**.
+- Find siempre va a devolver el primer y solo el primer elemento que haga match con la condición. 
 ```javascript
+//Syntax
+arrayName.find((item, index /*optional*/, array /*optional*/) => {/*code*/})
 
+```
+- El callback que le pasamos a este método puede tomar 3 parámetros: 
+  - 1. **item** → el elemento actual.
+  - 2. **index [opcional]** → el índice del elemento actual.
+  - 3. **array [opcional]** → el array mismo sobre el que estamos iterando.
+
+<br>
+
+- Diferencias entre **filter()** & **find()**
+  <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ZaT0FkK9--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kyfxc8l116xdsk6ko449.png" alt="fullcups" height="300px">
+
+
+```javascript
+const animals = ['🐱', '🐶', '🦁', '🐍', '🐞'];
+const snake = animals.find(item => item === '🐍');
+console.log(snake); //expected output -> '🐍'
 ```
 ---
 #### Includes
