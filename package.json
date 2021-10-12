@@ -1,0 +1,26 @@
+{
+  "name": "arrays-curso-patzi",
+  "version": "1.0.0",
+  "description": "Ejemplos sobre como tratat los datos con arrays de objetos en javascript ES6",
+  "main": "forEach.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmrg-link/manipulacion_arrays_en_js.git"
+  },
+  "keywords": [
+    "js",
+    "array"
+  ],
+  "author": "jmrg-link",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmrg-link/manipulacion_arrays_en_js/issues"
+  },
+  "homepage": "https://github.com/jmrg-link/manipulacion_arrays_en_js#readme",
+  "dependencies": {
+    "http-server": "^13.0.2"
+  }
+}
