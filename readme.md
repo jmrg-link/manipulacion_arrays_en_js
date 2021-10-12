@@ -80,16 +80,36 @@ ArrayName.forEach((item, index, array) => { /*code*/ })
 
 ---
 #### Map
--   Ejemplo
+-   **Map** es un método inmutable que nos permite iterar sobre un array y crear uno nuevo con nuevas características o transformaciones.
+
 ```javascript
+//Syntax  
+ArrayName.map((item, index /*optional*/, array /*optional*/) => { /*code*/ })
 
 ```
+
+- El callback que le pasamos a este método puede tomar 3 parámetros:
+    - **item** → el elemento actual.
+    - **index [opcional]** → el índice del elemento actual.
+    - **array [opcional]** → el array mismo sobre el que estamos iterando. 
+
+```javascript
+//ejemplo  
+/* ArrayName.map((item, index, array) => { //code }) */
+const numbers = [1, 2, 3, 4, 5];
+const numbersPlusOne = numbers.map(number => number + 1);
+
+console.log('original', numbers) /*[1, 2, 3, 4, 5]  El array original no fue modificado */
+console.log('new_version', numbersPlusOne) /* [2, 3, 4, 5, 6] Sino que se creo una nueva copia con las modificaciones. */
+```
+ 
 ---
 #### Map Reloaded
 -   Ejemplo
 ```javascript
 
 ```
+-
 ---
 #### Filter
 -   Ejemplo
