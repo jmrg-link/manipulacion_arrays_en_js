@@ -228,15 +228,24 @@ const result = numbers.reduce((acum, item) => {
 console.log(result) // { '1-5': 12, '8-9': 11, '6-7': 4 }
 ```
 ---
-#### Metodos en Javascript
--   Ejemplo
+
+#### Some
+-   Some retorna true si alguno de los elementos dentro de un array cumple una condición dada, o false si es que no se cumple, es inmutable.
+-  ⚡  Este método retornará false si el array que iteramos está vacío.
+```javascript
+// Syntax
+arrayName.some((item, index /*optional*/, array /*optional*/) => {/*code*/});
+```
+- El callback que le pasamos a este método puede tomar 3 parámetros: 
+  - 1. **item** → el elemento actual.
+  - 2. **index [opcional]** → el índice del elemento actual.
+  - 3. **array [opcional]** → el array mismo sobre el que estamos iterando.
+
 ```javascript
 
-```
----
-#### Some
--   Ejemplo
-```javascript
+const food = ['🍗', '🍖', '🥕', '🥩'];
+const hasCarrots = food.some(item => item === '🥕')
+console.log(hasCarrots) // expected output -> true
 
 ```
 ---
