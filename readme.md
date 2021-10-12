@@ -391,10 +391,9 @@ console.log(matriz.flat(2))
 ```
 ---
 #### FlatMap
--   Ejemplo
-```javascript
+- Tienes las propiedades de un flat (alinear array)+ map(transformarlo mientra se aplana).
 
-```
+- Example : folder:/server
 ---
 #### Mutable Fucntion
 -   Ejemplo
