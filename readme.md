@@ -369,8 +369,24 @@ console.log(numbers.concat(['a','b','c'])); //expected output -> [1, 2, 3, 4, 5,
 ```
 ---
 #### Flat
--   Ejemplo
+-   El método flat nos permite 'aplanar' un array de varias dimensiones, o una matriz mejor dicho, sin modificar el array original.
+-   
 ```javascript
+//Syntax
+arrayName.flat(depth /*optional*/); //retorna el array 'aplanado'.
+
+```
+- Flat puede tomar un argumento opcional: 
+  - 1. **depth [opcional]** → la profundidad en la que queremos aplicar el método.
+- Si no le pasamos ningún argumento a flat, entonces depth será igual a 1.
+
+```javascript
+const matriz = [1, [2, 3], [[4, 5, 6], 7, 8], 9];
+console.log(matriz.flat(1)) // es igual que colocar matriz.flat()
+//expected output -> [1, 2, 3, [4, 5, 6], 7, 8, 9]
+
+console.log(matriz.flat(2))
+//expected output -> [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 ```
 ---
