@@ -232,6 +232,7 @@ console.log(result) // { '1-5': 12, '8-9': 11, '6-7': 4 }
 #### Some
 -   Some retorna true si alguno de los elementos dentro de un array cumple una condición dada, o false si es que no se cumple, es inmutable.
 -  ⚡  Este método retornará false si el array que iteramos está vacío.
+-  Libreria de fechas en el ejercicio: [date-fns](https://date-fns.org/)
 ```javascript
 // Syntax
 arrayName.some((item, index /*optional*/, array /*optional*/) => {/*code*/});

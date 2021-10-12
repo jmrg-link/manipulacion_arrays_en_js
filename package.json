@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/jmrg-link/manipulacion_arrays_en_js#readme",
   "dependencies": {
+    "date-fns": "^2.25.0",
     "http-server": "^13.0.2"
   }
 }
