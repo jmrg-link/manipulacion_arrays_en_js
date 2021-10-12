@@ -56,10 +56,28 @@ ArrayName.forEach((item, index, array) => { /*code*/ })
 ```
 ---
 #### Mutable o Inmutable
--   Ejemplo
-```javascript
+-   Un **`valor mutable es todo aquel que puede cambiar después de haber sido creado`**, y uno **`inmutable siempre será igual a través del tiempo`**, no es posible cambiar su valor sin perder el valor anterior o sin causar un error. 
 
-```
+    - :speech_balloon: En **JavaScript** solo los **`arrays`** y los **`objetos`** son mutables. Cuando intentamos cambiar o 'mutar' una variable que contiene un string o un número, esta no va a 'mutar' su valor original, sino que se creará un nuevo espacio en memoria con el nuevo valor y la variable ahora apuntará a este nuevo espacio, soltando el valor anterior y dejándolo a disposición del **`garbage collector`**.
+  
+-   Algunos de los métodos que se encuentran dentro de Array.prototype son mutables ya que alteran el array original, y otros por su parte crean copias del array original para así evitar modificarlo.
+
+- > -**`Paso por referencia vs Paso por valor`**
+  - Por tipos, los primitivos se pasan por valor y los objetos por referencia
+    
+    <img src="https://static.platzi.com/media/user_upload/1_t6HbQiO7mmPvaesR9nAriw-6c33bd61-5064-475e-976a-fc998fdf56e2.jpg" alt="platzi logo" height="300px">
+
+    <img src="https://i.stack.imgur.com/8XAQ1.gif" alt="platzi logo" height="300px">
+
+
+
+##### :star: Métodos vs for/for... of...
+- Estas dos formas de resolver problemas relacionados con arrays corresponden a diferentes paradigmas de programación; los métodos son la forma declarativa de decirle al programa qué debe hacer, y los `for/for... of...` son la forma imperativa de decirle al programa qué hacer y cómo debe hacerlo paso a paso.
+
+- Según algunos tests y pruebas se ha demostrado que suele ser mucho más rápido para un programa ejecutar el código imperativo, pero siempre será mucho más fácil de leer el código declarativo, así que es una cuestión de performance y gustos del programador.
+
+  - [Aquí](https://leanylabs.com/blog/js-forEach-map-reduce-vs-for-for_of/) puedes encontrar mucha más información sobre esto.
+
 ---
 #### Map
 -   Ejemplo
