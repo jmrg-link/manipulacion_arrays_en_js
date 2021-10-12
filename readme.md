@@ -316,9 +316,21 @@ console.log(indexOfLion); //expected output -> 2
 ```
 ---
 #### Includes
--   Ejemplo
+-   Este método nos ayuda a determinar fácilmente si un array contiene un elemento predeterminado. Si el elemento existe includes retorna true, si no devuelve false. Es inmutable. 
+-   Este método también se puede utilizar con strings.
 ```javascript
+//Syntax
+arrayName.includes(element, initialIndex /*optional*/);
+```
+- Includes puede tomar 2 argumentos:
+  - 1. **element** → el elemento que estamos buscando dentro del array.
+  - 2. **initialIndex** **[opcional]** → el índice desde el cual queremos empezar a buscar.
 
+```javascript
+//example
+const candies = ['🍬', '🍫', '🍭', '🍡'];
+console.log(candies.includes('🍭')); //expected output -> true
+console.log(candies.includes('🍬', 2)); // expected output -> false (porque '🍬' está en la posición 0, pero nosotros le indicamos a includes que empiece a buscar desde el índice número 2.)
 ```
 ---
 #### Flat
