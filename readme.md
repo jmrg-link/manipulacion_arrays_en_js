@@ -334,15 +334,38 @@ console.log(candies.includes('🍬', 2)); // expected output -> false (porque '�
 ```
 ---
 #### Join
--   Ejemplo
+-   El método join nos permite unir todos los elementos de un array dentro de un solo string sin modificar el array original.
+    -   Join va a retornar un string vacío si el array no contiene ningún elemento. 
 ```javascript
+//syntax
+arrayName.join(/*separator string*/);
+```
+- Este método recibe un string que se colocará en medio de los elementos para concatenarlos.
+  - Si el array solo tiene un elemento, entonces el `separator string` se ignorará.
+```javascript
+//example
+const animals = ['🐱', '🐶', '🦁', '🐍', '🐞'];
+console.log(animals.join('-')); //expected output -> '🐱-🐶-🦁-🐍-🐞'
+console.log(animals.join('<->')); //expected output -> '🐱<->🐶<->🦁<->🐍<->🐞'
 
+const number = [1];
+console.log(number.join('-----')); //expected output -> '1' (la string que pasamos como argumento se ignora, ya que el array tiene un solo elemento.)
 ```
 ---
 #### Concat
--   Ejemplo
+-   Este método nos permite concatenar dos o más arrays existentes, devolviendo un array totalmente nuevo que no modifica ninguno de los originales. 
 ```javascript
+//Syntax 
+arrayName.concat(FirstArray, SecondArray, ArrayN);
 
+```
+- Los arrays se concatenan en el orden en el que los pasemos.
+
+```javascript
+//exaple 
+const numbers = [1,2,3,4,5];
+console.log(numbers.concat([6,7], [8,9,10])); //expected output -> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+console.log(numbers.concat(['a','b','c'])); //expected output -> [1, 2, 3, 4, 5, 'a', 'b', 'c']
 ```
 ---
 #### Flat
