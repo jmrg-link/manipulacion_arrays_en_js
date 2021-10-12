@@ -156,8 +156,10 @@ console.log('dog:', dog) //expected output: 'dog: ['🐶']'
 
 ---
 #### Reduce
--   Ejemplo
+- El método reduce nos permite tomar todos los valores de un array y reducirlos a uno solo, por lo tanto este método no retorna un array, sino un único valor. No modifica el array original, es inmutable.
+- 
 ```javascript
+//Syntax
 
 ```
 ---
@@ -165,7 +167,43 @@ console.log('dog:', dog) //expected output: 'dog: ['🐶']'
 -   Ejemplo
 ```javascript
 
+arrayName.reduce(
+	(accumulator, item, index /*optional*/, array /*optional*/) => { /*code*/ },
+	accumulatorInitialValue
+)
+
 ```
+- Este método recibe dos argumentos:
+  - 1. **Callback →** Esta función se encargará de 'reducir' el array y retornar el valor que queremos que se vaya guardando dentro del `acumulator`. Puede tomar 4 argumentos:
+        - accumulator → esta variable es la que se encargará de ir guardando el valor que retorna el `callback` en cada iteración.
+        - item →cada uno de los valores del array.
+        - index [opcional] → el índice del item actual.
+        - array [opcional] → el array sobre el que estamos aplicando el método.
+  - 2. **accumulatorInitialValue** →es el valor que tomará `accumulator` en la primera iteración.
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+
+const sum = numbers.reduce(
+	(accumulator, number) => {
+		console.log(`accumulator: ${accumulator}, number: ${number}, return_value: ${accumulator + number}`);
+		return accumulator + number;
+	},
+	5
+);
+
+console.log(sum) // 20
+
+/* expected output: */
+// primera vuelta -> accumulator: 5, number: 1, return_value: 6
+// segunda vuelta -> accumulator: 6, number: 2, return_value: 8
+// tercera vuelta -> accumulator: 8, number: 3, return_value: 11
+// cuarta vuelta -> accumulator: 11, number: 4, return_value: 15
+// quinta vuelta -> accumulator: 15, number: 5, return_value: 20
+// final result -> 20
+
+```
+
 ---
 #### Metodos en Javascript
 -   Ejemplo
