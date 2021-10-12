@@ -136,10 +136,24 @@ const rta = orders.map(item => {
 ```
 ---
 #### Filter
--   Ejemplo
+- Filter es un método inmutable que nos permite iterar sobre un array y crear un nuevo array solo con los elementos que cumplan cierta condición.
+  
 ```javascript
+//Syntax
+arrayName.filter((item, index /*optional*/, array /*optional*/) => /*codition*/);
+```
+- El callback que le pasamos a este método puede tomar 3 parámetros: 
+  - 1. **item** → el elemento actual.
+  - 2. **index [opcional]** → el índice del elemento actual.
+  - 3. **array [opcional]** → el array mismo sobre el que estamos iterando.
+
+```javascript
+const animals = ['🐱', '🐶', '🦁', '🐍', '🐞'];
+const dog = animals.filter(animal => animal === '🐶');
+console.log('dog:', dog) //expected output: 'dog: ['🐶']'
 
 ```
+
 ---
 #### Reduce
 -   Ejemplo
